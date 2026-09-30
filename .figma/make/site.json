@@ -1,0 +1,10 @@
+{
+  "description": "Displays continuously updating date and time with elegant minimalistic scroll effects, enhancing user engagement and visual appeal in real-time.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

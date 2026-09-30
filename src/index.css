@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Miranda Sans';
+  src: url('/assets/MirandaSans-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Miranda Sans', sans-serif;
+}
+
+html {
+  background: #141414;
+}
+
+body {
+  margin: 0;
+}
+
+.gallery {
+  width: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+  background: #141414;
+}
+
+.gallery-sequence {
+  width: 100%;
+}
+
+.gallery-hero,
+.gallery-panel {
+  position: relative;
+  overflow: hidden;
+  background: #141414;
+}
+
+.gallery-hero {
+  aspect-ratio: 1440 / 892;
+}
+
+.gallery-hero img,
+.gallery-panel img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-title {
+  position: absolute;
+  top: 42.7%;
+  left: 50%;
+  width: min(405px, 90%);
+  transform: translateX(-50%);
+  color: #ffeb84;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -2.4px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.gallery-title p {
+  margin: 0;
+}
+
+.gallery-parking {
+  aspect-ratio: 1440 / 1156;
+}
+
+.gallery-mosaic {
+  display: grid;
+  grid-template-columns: 51.4583% 48.5417%;
+  grid-template-rows: 44.3359% 55.6641%;
+  aspect-ratio: 1440 / 1024;
+}
+
+.gallery-chapel {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+.gallery-studio {
+  aspect-ratio: 1440 / 1024;
+}
+
+@media (max-width: 700px) {
+  .gallery-hero {
+    min-height: 65dvh;
+  }
+
+  .gallery-title {
+    font-size: clamp(16px, 4vw, 22px);
+    letter-spacing: -.08em;
+  }
+
+  .gallery-mosaic {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+  }
+
+  .gallery-street { aspect-ratio: 741 / 454; }
+  .gallery-architecture { aspect-ratio: 741 / 569; }
+  .gallery-chapel { aspect-ratio: 699 / 1024; }
+}
